@@ -1,19 +1,20 @@
 import "./Greeting.css";
+import NameInput from "./NameInput";
 
-function Greeting () {
+function Greeting (props) {
+    const submitNewNameHandler = (submittedName) => {
+        const name = {
+            submittedName
+        };
+    }
     return (
         <div>
             <div>
                 <p>
                     Hi there! <br/>
                     My name is Leila or short - Leya <br/><br/>
-                    What is your name?
                 </p>
-
-                <div>
-                    <input type="text"/>
-                    <button type="submit">Enter</button>
-                </div>
+                <NameInput onSubmitNewName={submitNewNameHandler} />
             </div>
         </div>
     );
