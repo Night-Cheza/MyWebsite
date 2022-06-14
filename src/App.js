@@ -1,6 +1,6 @@
 import NavBar from './components/LoadPage/NavBar';
+import Greeting from './components/LoadPage/Greeting';
 import './App.css';
-import RenderingName from './components/LoadPage/RenderingName';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div>
       <header className="appHeader">
         <NavBar />
-        <RenderingName />
+        <Greeting />
       </header>
     </div>
   );

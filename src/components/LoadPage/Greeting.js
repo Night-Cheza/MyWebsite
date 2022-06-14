@@ -1,12 +1,15 @@
-import "./Greeting.css";
+import { useState } from "react";
 import NameInput from "./NameInput";
+import "./Greeting.css";
 
-function Greeting (props) {
+function Greeting () {
+    //to render entered name
+    useState();
+    const [enteredName, setEnteredName] = useState("");
     const submitNewNameHandler = (submittedName) => {
-        const name = {
-            submittedName
-        };
-    }
+        setEnteredName(submittedName);    
+    };
+    
     return (
         <div>
             <div>
@@ -15,6 +18,8 @@ function Greeting (props) {
                     My name is Leila or short - Leya <br/><br/>
                 </p>
                 <NameInput onSubmitNewName={submitNewNameHandler} />
+
+                <p>Nice meeting you {enteredName}</p>
             </div>
         </div>
     );

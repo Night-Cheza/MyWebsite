@@ -16,6 +16,7 @@ function NameInput(props) {
 
          //to pass new data to Greeting.js
         props.onSubmitNewName(name);
+        
         //to clear input after form is submitted
         setNewName("");
     }
