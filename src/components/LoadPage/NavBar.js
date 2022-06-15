@@ -3,21 +3,22 @@ import "./NavBar.css";
 
 function NavBar () {
     return (
-        <div>
+        <div>            
             <Nav>
-            <Nav.Item>
-                <Nav.Link eventKey="link-1">About me</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link eventKey="link-2">My values</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link eventKey="link-3">My projects</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-                <Nav.Link eventKey="link-4">Contacts</Nav.Link>
-            </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="link-1">About me</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="link-2">My values</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="link-3">My projects</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link eventKey="link-4">Contacts</Nav.Link>
+                </Nav.Item>
             </Nav>
+            <p>What would you like to know?</p>
         </div>
     );
 }

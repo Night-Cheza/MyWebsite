@@ -29,7 +29,7 @@ function NameInput(props) {
 
             <div>
                 <input type="text" value={newName} onChange={nameHandler}/>
-                <button type="submit">Enter</button>
+                <button type="submit" className="btn btn-primary">Enter</button>
             </div>
         </form>
     )
