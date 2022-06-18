@@ -28,7 +28,7 @@ function NameInput(props) {
             </p>
 
             <div>
-                <input type="text" value={newName} onChange={nameHandler}/>
+                <input type="text" className="nameInputField" value={newName} onChange={nameHandler}/>
                 <button type="submit" className="btn btn-primary">Enter</button>
             </div>
         </form>

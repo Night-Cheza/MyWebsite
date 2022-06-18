@@ -1,5 +1,6 @@
 import { useState } from "react";
 import NameInput from "./NameInput";
+import MenuButtons from "./MenuButtons"
 import "./Greeting.css";
 
 function Greeting () {
@@ -11,8 +12,11 @@ function Greeting () {
     const submitNewNameHandler = (submittedName) => {
         setEnteredName(submittedName);  
         //to display line with entered name
-        setShowName(true);          
-    };
+        setShowName(true); 
+    }
+
+   
+
 
     return (
         <div>
@@ -22,8 +26,9 @@ function Greeting () {
                     My name is Leila or short - Leya <br/><br/>
                 </p>
                 {!showName && <NameInput onSubmitNewName={submitNewNameHandler} />}
-                {/* to display line with entered name and hide field for entering name */}
-                {showName && <p>Nice meeting you {enteredName}!</p>}
+                {/* to display line with entered name and hide text field for entering name */}
+                {showName && <p>Nice meeting you {enteredName}! <br/>
+                    <MenuButtons/></p>}
             </div>
         </div>
     );

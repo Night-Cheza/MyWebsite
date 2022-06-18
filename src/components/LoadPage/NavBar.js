@@ -18,7 +18,6 @@ function NavBar () {
                     <Nav.Link eventKey="link-4">Contacts</Nav.Link>
                 </Nav.Item>
             </Nav>
-            <p>What would you like to know?</p>
         </div>
     );
 }
