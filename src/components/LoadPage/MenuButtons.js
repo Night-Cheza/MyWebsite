@@ -1,16 +1,9 @@
-// import ReactTimeout from 'react-timeout'
 import { useState } from "react";
-
-// import { useEffect } from "react";
-
-// const delay = (ms) => new Promise(
-//     resolve => setTimeout(resolve, ms)
-// );
-
 
 const MenuButtons = () =>{
     const [timeElapsed, setTimeElapse] = useState(false);
 
+    //to render a question with 1200ms delay
     setTimeout(() => {
         setTimeElapse(true);
     }, 1200);
