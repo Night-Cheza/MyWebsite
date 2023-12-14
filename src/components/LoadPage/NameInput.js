@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./NameInput.css";
+import React from "react";
 
 function NameInput(props) {
+    let name;
     const [newName, setNewName] = useState("");
 
     const nameHandler = (event) => {
@@ -11,9 +13,7 @@ function NameInput(props) {
     const submitHandler = (event) => {
         //to prevent page reload on submit event
         event.preventDefault();
-
-        const name = newName
-
+        newName.length === 0 ? name = 'Stranger' : name = newName
          //to pass new data to Greeting.js
         props.onSubmitNewName(name);
         

@@ -1,7 +1,7 @@
 import NavBar from './components/LoadPage/NavBar';
 import Greeting from './components/LoadPage/Greeting';
 import './App.css';
-
+import React from 'react';
 
 function App() {
   return (
