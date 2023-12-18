@@ -27,13 +27,9 @@ function Greeting () {
     return (
         <div>
             <div>
-                <p>
-                    Hi there! <br/>
-                    My name is Leila<br/><br/>
-                </p>
-                {!showName && <NameInput onSubmitNewName={submitNewNameHandler} />}
+                {!showName && <div className="greetings">Hi there! <br/>My name is Leila<br/><NameInput onSubmitNewName={submitNewNameHandler} /></div>}
                 {/* to display line with entered name and hide text field for entering name */}
-                {showName && <p>Nice meeting you, {enteredName}!</p>}
+                {showName && <div className="nameDisaplay">Nice meeting you, {enteredName}!</div>}
                 {timeElapsed ? <div><Zoom><p>What would you like to know?</p></Zoom><Fade delay={1e3} cascade damping={1e-1}><NavBar /></Fade></div> : null}
             </div>            
         </div>

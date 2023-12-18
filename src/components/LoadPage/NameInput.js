@@ -1,6 +1,6 @@
+import React from "react";
 import { useState } from "react";
 import "./NameInput.css";
-import React from "react";
 
 function NameInput(props) {
     let name;
@@ -27,9 +27,9 @@ function NameInput(props) {
                 What is your name?
             </p>
 
-            <div>
-                <input type="text" className="nameInputField" value={newName} onChange={nameHandler}/>
-                <button type="submit" className="btn btn-primary">Enter</button>
+            <div className="inputField">
+                <input type="text" value={newName} onChange={nameHandler}/>
+                <button type="submit" >Enter</button>
             </div>
         </form>
     )

@@ -1,3 +1,23 @@
 @media (max-width:415px) {
 
 }
+.inputField {
+    margin-top: 0.5%;
+}
+
+.inputField input{
+    font-size: medium;
+    height: auto;
+    margin: 0;
+}
+
+.inputField button {
+    font-size: medium;
+    margin: 0;
+    text-align: center;
+    padding: 0 5px 0 5px;
+}
+
+form p {
+    margin-top: 0.7%;
+}

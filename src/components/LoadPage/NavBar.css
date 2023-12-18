@@ -1,0 +1,11 @@
+.menu {
+  margin-top: 1vh;
+}
+
+.menu button {
+  padding: 0 5px 0 5px;
+  width: auto;
+  height: auto;
+  font-size: medium;
+  text-align: center;
+}
