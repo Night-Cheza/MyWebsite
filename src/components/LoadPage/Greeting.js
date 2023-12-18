@@ -3,8 +3,7 @@ import NameInput from "./NameInput";
 import NavBar from "./NavBar";
 import "./Greeting.css";
 import { useState } from "react";
-import { Zoom } from 'react-awesome-reveal';
-
+import { Fade, Zoom } from 'react-awesome-reveal';
 
 function Greeting () {
     useState();
@@ -25,11 +24,6 @@ function Greeting () {
         setTimeElapse(true);
     }, 1200)};
 
-    // const [showButton, setShowButton] = useState(false);
-    // if(timeElapsed) {
-    //     setShowButton(showButton);
-    // }
-
     return (
         <div>
             <div>
@@ -40,7 +34,7 @@ function Greeting () {
                 {!showName && <NameInput onSubmitNewName={submitNewNameHandler} />}
                 {/* to display line with entered name and hide text field for entering name */}
                 {showName && <p>Nice meeting you, {enteredName}!</p>}
-                {timeElapsed ? <Zoom><div><p>What would you like to know?</p> <NavBar /></div></Zoom> : null}
+                {timeElapsed ? <div><Zoom><p>What would you like to know?</p></Zoom><Fade delay={1e3} cascade damping={1e-1}><NavBar /></Fade></div> : null}
             </div>            
         </div>
     );
