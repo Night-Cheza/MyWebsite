@@ -1,6 +1,7 @@
 import React from 'react';
-import Greeting from './components/LoadPage/Greeting';
 import './App.css';
+import Greeting from './components/LoadPage/Greeting';
+
 
 function App() {
   return (
