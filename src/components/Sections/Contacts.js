@@ -1,11 +1,15 @@
 import React from "react";
 
-function Contacts () {
+function Contacts (props) {
+    const {show} = props;
+
     return (
         <div>
-            <p>
-                Here will be my contacts
-            </p>
+            {show && (
+                <p>
+                    Here will be my contacts
+                </p>
+            )}
         </div>
     )
 }

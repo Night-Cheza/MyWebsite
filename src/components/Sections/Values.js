@@ -1,11 +1,15 @@
 import React from "react";
 
-function Values () {
+function Values (props) {
+    const {show} = props;
+
     return (
         <div>
-            <p>
-                Here will be my values
-            </p>
+            {show && (
+                <p>
+                    Here will be my values
+                </p>
+            )}
         </div>
     )
 }

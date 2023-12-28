@@ -5,10 +5,8 @@ import Greeting from './components/LoadPage/Greeting';
 
 function App() {
   return (
-    <div>
-      <header className="appHeader">
+    <div className="appBody">
         <Greeting />
-      </header>
     </div>
   );
 }

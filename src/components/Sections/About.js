@@ -1,12 +1,16 @@
 import React from "react";
 
-function About () {
+function About (props) {
+    const {show} = props;
+
     return (
-        <div>
-            <p>
-                Here will be something about me
-            </p>
-        </div>
+        <span>
+            {show && (
+                <p>
+                    Here will be something about me
+                </p>
+            )}
+        </span>
     )
 }
 

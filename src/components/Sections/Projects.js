@@ -1,11 +1,14 @@
 import React from "react";
 
-function Projects () {
+function Projects (props) {
+    const {show} = props;
     return (
         <div>
-            <p>
-                Here will be my projects
-            </p>
+            {show && (
+                <p>
+                    Here will be my projects
+                </p>
+            )}
         </div>
     )
 }
