@@ -4,13 +4,13 @@ function About (props) {
     const {show} = props;
 
     return (
-        <span>
+        <div>
             {show && (
                 <p>
                     Here will be something about me
                 </p>
             )}
-        </span>
+        </div>
     )
 }
 

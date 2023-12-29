@@ -6,6 +6,8 @@ import Values from '../Sections/Values';
 import Projects from '../Sections/Projects';
 import Contacts from '../Sections/Contacts';
 
+//think of a way to use one component for all sections depending on what button clicked
+
 function NavBar () {
     useState();
     const [showAbout, setShowAbout] = useState(false);
