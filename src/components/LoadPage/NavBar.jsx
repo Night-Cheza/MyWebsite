@@ -62,13 +62,15 @@ import "./NavBar.css";
 //     );
 // }
 
-function NavBar({children, buttonClicked}) {
+// we can use prop for dynamic styling. Ex: isSelected for a button
+function NavBar({children, buttonClicked, isSelected}) {
     return(        
         // props.children refers to anything/any content that is placed between custom components tags ex: <NavBar>About</NavBar>; {children} and children
         // also, we can do <NavBar label='About' /> and instead of props and props.children, we can do {label} and label
         // in case <NavBar label='About'><p>some text</p><ul></ul></NavBar> it will be {label, children} and label, children
         <ul>
-            <button onClick={buttonClicked}>{children}</button>
+            {/* if button is selected, it will have className 'active', if it's not selected, it will not have className */}
+            <button className={isSelected ? 'active' : undefined} onClick={buttonClicked}>{children}</button>
         </ul>
     )
 }
