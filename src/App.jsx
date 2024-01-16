@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
 import Greeting from './components/LoadPage/Greeting';
-// import NavBar from './components/LoadPage/NavBar'
 // better way to import img into code
 import homeImg from './img/homeLogo.png';
 import NavBar from './components/LoadPage/NavBar';
+import Section from './components/Sections/Section'
+import Buttons from './components/Sections/Buttons'
 
 const sectionContent = [
   {
@@ -88,23 +89,26 @@ function App() {
               <Sections key={sectionItem.title} {...sectionItem} />))}
             </li>
           </section>
-          <section>
-            <menu>
-              {/* arrow function helps to make clickHandler customizable when it has to be executed*/}
-              <NavBar
-              // isSelected is for dynamic styling if the button is selected, css styling for active button will be applied
+          <Section title="" id="" className="">
+            {/* jsx code can be accepted as values for props*/}
+            <Buttons btns={
+              <>
+                <NavBar
+                // isSelected is for dynamic styling if the button is selected, css styling for active button will be applied
                 isSelected={selectedSection === 'about'}
+                // arrow function helps to make clickHandler customizable when it has to be executed
                 buttonClicked={() => clickHandler('about')}>About</NavBar>
-              <NavBar
+                <NavBar
                 isSelected={selectedSection === 'values'}
                 buttonClicked={() => clickHandler('values')}>Values</NavBar>
-              <NavBar
-              isSelected={selectedSection === 'projects'}
-              buttonClicked={() => clickHandler('projects')}>Projects</NavBar>
-              <NavBar
-              isSelected={selectedSection === 'contacts'}
-              buttonClicked={() => clickHandler('contacts')}>Contacts</NavBar>
-            </menu>
+                <NavBar
+                isSelected={selectedSection === 'projects'}
+                buttonClicked={() => clickHandler('projects')}>Projects</NavBar>
+                <NavBar
+                isSelected={selectedSection === 'contacts'}
+                buttonClicked={() => clickHandler('contacts')}>Contacts</NavBar>
+              </>
+            }>
             {
               !selectedSection 
               ?  <Greeting /> 
@@ -119,7 +123,8 @@ function App() {
                   </p>
                 </div>)
             }
-          </section>
+            </Buttons>
+          </Section>
         </main>
     </div>
   );
